@@ -1,0 +1,132 @@
+/*----------------------------------------------------------*\
+    #TRANSFERS&PAYMENTS
+\*----------------------------------------------------------*/
+
+@import 'config';
+
+.transfer-controlers {
+    display: flex;
+    font-weight: 500;
+    width: 100%;
+}
+
+    .transfer-controlers__item {
+        border-top: 1px solid $inactive;
+        border-left: 1px solid $inactive;
+        border-right: 1px solid $inactive;
+        border-bottom: 1px solid $active;
+        color: $black;
+        flex: 1;
+        padding: 1em 0;
+        text-align: center;
+        text-decoration: none;
+        transition: border 300ms ease;
+        width: 50%;
+    }
+
+    .payments {
+        display: none;
+    }
+
+    .transactions__date-search {
+        margin: auto;
+        padding: 2em 0;
+        width: 80%;
+    }
+
+        .transactions-date {
+            border: 1px solid $inactive;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .transactions-date__wrapper {
+            display: inline-block;
+            padding: 0.3em;
+        }
+
+        .transactions-date__range-span {
+            display: block;
+            font-size: 0.8em;
+        }
+
+        .transactions-date__date-span {
+            font-weight: 500;
+        }
+
+        .transactions-date__icon {
+            margin-left: 0.2em;
+            width: 1em;
+        }
+
+        .transactions-search__input{
+            border: 1px solid $inactive;
+            height: 2.7em;
+            margin-left: 1.3em;
+            padding: 0.3em;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        .transactions-search__buttont {
+            background: url('/assets/img/magnifingglass.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 1.6em;
+            border: 1px solid $inactive;
+            border-left: none;
+            height: 2.7em;
+            margin-left: -4px;
+            vertical-align: middle;
+            width: 2.7em;
+        }
+
+    .transactions__item {
+        align-content: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        list-style-type: none;
+        margin: 0;
+        padding: 0.6em 0 0.6em 1em;
+    }
+
+    .transactions__item:first-child {
+        border-top: 1px solid $footer;
+    }
+
+    .transactions__item:nth-child(odd) {
+        background-color: $white;
+    }
+
+    .transactions__item:nth-child(even) {
+        background-color: $footer;
+    }
+
+        .transactions__cell {
+            margin-left: 1em;
+        }
+
+        .transactions__date {
+            flex-basis: 10%;
+            
+        }
+
+        .transactions__amount {
+            flex-basis: 5%;
+            
+        }
+
+        .transactions__currency {
+            flex-basis: 5%;
+            
+        }
+        
+        .transactions__type {
+            flex-basis: 5%;
+            
+        }
+
+        .transactions__description {
+            flex-basis: 30%;
+        }
