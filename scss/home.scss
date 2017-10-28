@@ -1,0 +1,130 @@
+/*----------------------------------------------------------*\
+    #HOME
+\*----------------------------------------------------------*/
+
+@import 'config';
+
+.main-container {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding-top: 5rem;
+    position: relative;
+    width: 100%;
+}
+
+
+/*----------------------------------------------------------*\
+    #HOME-USER-INFO
+\*----------------------------------------------------------*/
+
+.user-info {
+    border: 1px solid $inactive;
+    font-size: 2.8rem;
+    padding: 0.9em 1.1em;
+    position: relative;
+    width: 100%;
+}
+
+    .user-info__profile-img-wrapper {
+        display: inline-block;
+        height: 3em;
+        padding: 1px;
+        vertical-align: middle;
+        width: 3em;
+    }
+
+        .user-info__profile-img {
+            height: 3em;
+            object-fit: cover;
+            widows: 3em;
+        }
+
+    .user-info__username {
+        display: inline-block;
+        margin-left: 0.5em;
+        vertical-align: middle;
+    }
+
+    .user-info__balance {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        position: absolute;
+        right: 3em;
+        top: 0;
+        height: 100%;
+    }
+
+        .user-info__balance-title {
+            font-size: 0.6em;
+            margin: 0;
+            text-align: center;
+        }
+
+        .user-info__balance-sum {
+            margin: 0;
+        }
+
+            .user-info__balance-currency {
+                font-size: 0.7em;
+            }
+
+            .user-info__balance-trailings {
+                font-size: 0.7em;
+                
+            }
+
+
+
+/*----------------------------------------------------------*\
+    #MAIN-CONTROLS
+\*----------------------------------------------------------*/
+
+.main-controls {
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: space-between;
+    margin-top: 1.2em;
+    width: 100%;
+}
+
+    .main-controls__item {
+        background-color: $white;
+        border: 1px solid $inactive;
+        color: $active;
+        padding: 1em 0;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms ease;
+        width: 23%;
+    }
+
+    .main-controls__item:hover {
+        color: $black;
+    }
+
+    .main-controls__item:not(.main-controls__item--active):hover .main-controls__icon {
+        transform: scale(1.1,1.1);
+    }
+
+    .main-controls__item--active {
+        border: 1px solid $active;
+        color: $black;
+    }
+
+        .main-controls__icon {
+            height: 4.5em;
+            transition: transform 300ms ease;
+        }
+
+        .main-controls__title {
+            font-weight: 500;
+            margin: 0.7em 0 0;
+        }
+
+.controls-content {
+    border: 1px solid $inactive;
+    font-size: 1.6rem;
+    margin-top: 1.2em;
+}
