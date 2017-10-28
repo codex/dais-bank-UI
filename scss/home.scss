@@ -7,7 +7,7 @@
 .main-container {
     margin: 0 auto;
     max-width: 1024px;
-    padding-top: 5rem;
+    padding: 3rem 0 18em;
     position: relative;
     width: 100%;
 }
@@ -18,9 +18,9 @@
 \*----------------------------------------------------------*/
 
 .user-info {
-    border: 1px solid $inactive;
+    // border: 1px solid $inactive;
     font-size: 2.8rem;
-    padding: 0.9em 1.1em;
+    padding: 0.3em 1.1em;
     position: relative;
     width: 100%;
 }
@@ -111,10 +111,37 @@
     .main-controls__item--active {
         border: 1px solid $active;
         color: $black;
+        position: relative;
+    }
+
+    .main-controls__item--active:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -20px;
+        border-top: 20px solid $active;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        margin: 0 auto;
+        width: 0;
+    }
+
+    .main-controls__item--active:after {
+        content: '';
+        position: absolute;
+        bottom: -19px;
+        left: 0;
+        right: 0;
+        border-top: 20px solid $white;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        margin: 0 auto;
+        width: 0;
     }
 
         .main-controls__icon {
-            height: 4.5em;
+            height: 3em;
             transition: transform 300ms ease;
         }
 
@@ -123,8 +150,58 @@
             margin: 0.7em 0 0;
         }
 
+
+
+/*----------------------------------------------------------*\
+    #SUB-CONTROLS
+\*----------------------------------------------------------*/
+
 .controls-content {
-    border: 1px solid $inactive;
     font-size: 1.6rem;
     margin-top: 1.2em;
+}
+
+.controls-content--bordered {
+    border-left: 1px solid $active;
+    border-right: 1px solid $active;
+    border-bottom: 1px solid $active;
+    min-height: 40rem;
+}
+
+.under-construction__wrapper {
+    text-align: center;
+}
+
+.under-construction__wrapper--bordered {
+    border: 1px solid $active;
+    text-align: center;
+    min-height: 45rem;
+}
+
+.under-construction {
+    vertical-align: middle;
+    min-height: 40rem;
+    width: 10rem;
+}
+
+.controllers-item {
+    border-top: 1px solid $inactive;
+    border-left: 1px solid $inactive;
+    border-right: 1px solid $inactive;
+    border-bottom: 1px solid $active;
+    color: $black;
+    flex: 1;
+    padding: 1em 0;
+    text-align: center;
+    text-decoration: none;
+    transition: border 300ms ease;
+    width: 50%;
+}
+
+.controllers-item--active {
+    border-top: 1px solid $active;
+    border-left: 1px solid $active;
+    border-right: 1px solid $active;
+    border-bottom: none;
+    
 }

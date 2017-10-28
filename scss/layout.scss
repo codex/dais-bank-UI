@@ -7,12 +7,13 @@
 html, body {
     font-family: $main-font;
     font-size: 62.5%;
+    min-height: 100vh;
+    position: relative;
 }
 
 // The bucket is a container for dynamically loaded html
 // sass can't calculate vh, rem, em
 .bucket {
-    min-height: 100vh;
 }
 
 
@@ -35,14 +36,17 @@ html, body {
 }
 
     .main-header__logo {
-        background: url('/assets/img/logoAsset.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
         display: inline-block;
         height: 5rem;
         vertical-align: middle;
         width: 5rem;
     }
+
+        .main-header__img {
+            height: 5rem;
+            object-fit: cover;
+            width: 5rem;
+        }
 
     .main-nav {
         display: inline-block;
@@ -138,6 +142,10 @@ html, body {
 .main-footer {
     background-color: $footer;
     font-size: 1.6rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
     .main-footer__container {

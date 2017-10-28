@@ -1,1 +1,107 @@
-<h1>accounts</h1>
+<div class="accounts-section">
+
+
+
+
+    <div class="accounts-controlers">
+
+        <a href="#" role="button" class="controllers-item controllers-item--active" data-type="transactions">Transactions</a>
+
+        <a href="#" role="button" class="controllers-item" data-type="accounts">Accounts and cards</a>
+
+    </div>
+
+
+
+
+    <div class="accounts-wrapper controls-content--bordered">
+    
+        <div class="transactions ">
+    
+            <div class="transactions__date-search">
+    
+                <div class="transactions-date">
+    
+                    <div class="transactions-date__wrapper">
+    
+                        <span class="transactions-date__range-span">From:</span>
+                        <span class="transactions-date__date-span">23/10/17</span>
+    
+                        <img src="/assets/img/calendar.svg" alt="calendar icon" class="transactions-date__icon">
+    
+                    </div>
+    
+                    <div class="transactions-date__wrapper">
+    
+                        <span class="transactions-date__range-span">To:</span>
+                        <span class="transactions-date__date-span">23/10/17</span>
+    
+                        <img src="/assets/img/calendar.svg" alt="calendar icon" class="transactions-date__icon">
+    
+                    </div>
+    
+                </div>
+    
+                <input type="text" placeholder="Search transactions" class="transactions-search__input">
+    
+                <button type="submit" class="transactions-search__buttont"></button>
+    
+            </div>
+    
+            <div class="transactions__list">
+
+                {{#each transactions}}
+
+                <ul class="transactions__item">
+
+                    <li class="transactions__cell transactions__date">
+                        {{date}}
+                    </li>
+
+                    <li class="transactions__cell transactions__amount">
+                        {{amount}}
+                    </li>
+
+                    <li class="transactions__cell transactions__currency">
+                        {{currency}}
+                    </li>
+
+                    <li class="transactions__cell transactions__type">
+                        {{type}}
+                    </li>
+
+                    <li class="transactions__cell transactions__description">
+                        {{description}}
+                    </li>
+
+                </ul>
+
+                {{/each}}
+
+            </div>
+    
+        </div>
+
+
+
+    
+
+
+        <div class="accounts">
+
+            <div class="under-construction__wrapper">
+
+                <img src="/assets/img/underconst.svg" alt="hammer and a screwdriver" class="under-construction">
+
+            </div>
+
+        </div>
+
+
+
+
+    
+    </div>
+
+</div>
+
