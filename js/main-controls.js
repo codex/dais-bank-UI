@@ -17,7 +17,7 @@ const mainControls = {
                 this.$html = $(html);
                 this.$control = this.$html.find('.main-controls__item');
                 this.$controlsContent = this.$html.find('.controls-content');
-                return fetchTemplate('accounts', this.data.accounts);
+                return fetchTemplate('accounts', this.data);
             })
             .then((html) => {
                 // intial template
@@ -35,8 +35,10 @@ const mainControls = {
     },
 
     getData() {
-        this.data = data;
-        return Promise.resolve(this.data);
+        return model.fetchData()
+            .then((data) => {
+                this.data = data;
+            });
     },
 
     navigation(e) {
@@ -45,7 +47,7 @@ const mainControls = {
         const template = $currentTarget.data('template');
         $('.main-controls__item--active').removeClass('main-controls__item--active');
         $currentTarget.addClass('main-controls__item--active');
-        fetchTemplate(template, data[template])
+        fetchTemplate(template, this.data)
             .then((html) => {
                 this.$template = $(html);
                 this.$controlsContent.html(this.$template);
@@ -53,13 +55,13 @@ const mainControls = {
     },
 
     subNavigation(e) {
-        e.preventDefault();
         const $target = $(e.target);
         const type = $target.data('type');
 
-        if ($target.hasClass('controllers-item')) {
-            $('.controllers-item--active').removeClass('controllers-item--active');
-            $target.addClass('controllers-item--active');
+        if ($target.hasClass('sub-controllers-item')) {
+            e.preventDefault();
+            $('.sub-controllers-item--active').removeClass('sub-controllers-item--active');
+            $target.addClass('sub-controllers-item--active');
         }
 
         if ($('.accounts-section')) {

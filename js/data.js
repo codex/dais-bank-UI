@@ -1,5 +1,5 @@
-const data = {
-    accounts: {
+const model = {
+    data: {
         transactions: [
             {
                 date: '02.10.2017',
@@ -37,5 +37,40 @@ const data = {
                 description: 'AudioTechnica Headset',
             },
         ],
+
+        accounts: [
+
+            {
+                id: '103305699043321 BGN',
+                name: 'Kamen Kamenov',
+                balance: '20,453.00 BGN',
+                available: '20,453.00 BGN',
+            },
+            {
+                id: '102233267403321 BGN',
+                name: 'Kamen Kamenov',
+                balance: '666.00 BGN',
+                available: '666.00 BGN',
+            },
+            {
+                id: '113205428045488 USD',
+                name: 'Kamen Kamenov',
+                balance: '190,453.00 USD',
+                available: '10,000.00 USD',
+            },
+        ],
+
+        cards: [
+            {
+                type: 'International Debit Card',
+                balance: '190,453.00 USD',
+                available: '10,000.00 USD',
+            },
+        ],
+    },
+
+    fetchData() {
+        return Promise.resolve(this.data);
     },
 };
+

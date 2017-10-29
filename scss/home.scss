@@ -101,6 +101,7 @@
     }
 
     .main-controls__item:hover {
+        border-color: $active;
         color: $black;
     }
 
@@ -184,24 +185,29 @@
     width: 10rem;
 }
 
-.controllers-item {
-    border-top: 1px solid $inactive;
-    border-left: 1px solid $inactive;
-    border-right: 1px solid $inactive;
-    border-bottom: 1px solid $active;
-    color: $black;
-    flex: 1;
-    padding: 1em 0;
-    text-align: center;
-    text-decoration: none;
-    transition: border 300ms ease;
-    width: 50%;
+.sub-controllers {
+    display: flex;
+    font-weight: 500;
+    width: 100%;
 }
 
-.controllers-item--active {
-    border-top: 1px solid $active;
-    border-left: 1px solid $active;
-    border-right: 1px solid $active;
-    border-bottom: none;
-    
-}
+    .sub-controllers-item {
+        border-top: 1px solid $inactive;
+        border-left: 1px solid $inactive;
+        border-right: 1px solid $inactive;
+        border-bottom: 1px solid $active;
+        color: $active;
+        flex: 1;
+        padding: 1em 0;
+        text-align: center;
+        text-decoration: none;
+        transition: border 300ms ease;
+    }
+
+    .sub-controllers-item--active {
+        border-top: 1px solid $active;
+        border-left: 1px solid $active;
+        border-right: 1px solid $active;
+        border-bottom: 1px solid $white;
+        color: $black;
+    }

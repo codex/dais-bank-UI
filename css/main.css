@@ -1,11 +1,8 @@
 /*----------------------------------------------------------*    #ACCOUNTS&CARDS
 \*----------------------------------------------------------*/
-.accounts-controlers {
-  display: flex;
-  font-weight: 500;
-  width: 100%; }
-
-.accounts {
+/*----------------------------------------------------------*    #TRANSACTIONS
+\*----------------------------------------------------------*/
+.transactions {
   display: none; }
 
 .transactions__date-search {
@@ -54,40 +51,88 @@
   width: 2.7em; }
 
 .transactions__item {
-  align-content: flex-start;
+  border-bottom: 1px solid #F4F2F2;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   list-style-type: none;
   margin: 0;
   padding: 0.6em 0 0.6em 1em; }
 
 .transactions__item:first-child {
-  border-top: 1px solid #F4F2F2; }
-
-.transactions__item:nth-child(odd) {
-  background-color: #ffffff; }
-
-.transactions__item:nth-child(even) {
-  background-color: #F4F2F2; }
-
-.transactions__cell {
-  margin-left: 1em; }
+  background-color: #CACACA;
+  border-bottom: none;
+  font-weight: 500; }
 
 .transactions__date {
-  flex-basis: 10%; }
+  flex: 1; }
 
 .transactions__amount {
-  flex-basis: 5%; }
+  flex: 1; }
 
 .transactions__currency {
-  flex-basis: 5%; }
+  flex: 1; }
 
 .transactions__type {
-  flex-basis: 5%; }
+  flex: 1; }
 
 .transactions__description {
-  flex-basis: 30%; }
+  flex: 4; }
+
+/*----------------------------------------------------------*    #ACCOUNTS
+\*----------------------------------------------------------*/
+.accounts__header {
+  padding-top: 1em; }
+
+.accounts__icon {
+  display: inline-block;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: bottom;
+  width: 1em; }
+
+.accounts__icon--accounts {
+  background: url("/assets/img/account-list.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.accounts__icon--cards {
+  background: url("/assets/img/cards-list.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.accounts__title {
+  font-weight: 500;
+  margin: 0;
+  padding: 1.2em 1em;
+  width: 100%; }
+
+.accounts__item {
+  align-content: flex-start;
+  border-bottom: 1px solid #F4F2F2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.6em 1em; }
+
+.accounts__item--title {
+  background-color: #CACACA; }
+
+.accounts__cell--title {
+  font-weight: 500; }
+
+.accounts__id {
+  flex-basis: 50%; }
+
+.accounts__balance {
+  flex-basis: 15%;
+  text-align: right; }
+
+.accounts__available {
+  flex-basis: 15%;
+  text-align: right; }
 
 /*----------------------------------------------------------*    #HOME
 \*----------------------------------------------------------*/
@@ -167,6 +212,7 @@
   width: 23%; }
 
 .main-controls__item:hover {
+  border-color: #666666;
   color: #000000; }
 
 .main-controls__item:not(.main-controls__item--active):hover .main-controls__icon {
@@ -234,24 +280,29 @@
   min-height: 40rem;
   width: 10rem; }
 
-.controllers-item {
+.sub-controllers {
+  display: flex;
+  font-weight: 500;
+  width: 100%; }
+
+.sub-controllers-item {
   border-top: 1px solid #CACACA;
   border-left: 1px solid #CACACA;
   border-right: 1px solid #CACACA;
   border-bottom: 1px solid #666666;
-  color: #000000;
+  color: #666666;
   flex: 1;
   padding: 1em 0;
   text-align: center;
   text-decoration: none;
-  transition: border 300ms ease;
-  width: 50%; }
+  transition: border 300ms ease; }
 
-.controllers-item--active {
+.sub-controllers-item--active {
   border-top: 1px solid #666666;
   border-left: 1px solid #666666;
   border-right: 1px solid #666666;
-  border-bottom: none; }
+  border-bottom: 1px solid #ffffff;
+  color: #000000; }
 
 /*----------------------------------------------------------*    #GLOBALS
 \*----------------------------------------------------------*/
@@ -792,104 +843,51 @@ template {
 
 /*----------------------------------------------------------*    #TRANSFERS&PAYMENTS
 \*----------------------------------------------------------*/
-.transfer-controlers {
-  display: flex;
-  font-weight: 500;
-  width: 100%; }
-
-.transfer-controlers__item {
-  border-top: 1px solid #CACACA;
-  border-left: 1px solid #CACACA;
-  border-right: 1px solid #CACACA;
-  border-bottom: 1px solid #666666;
-  color: #000000;
-  flex: 1;
-  padding: 1em 0;
-  text-align: center;
-  text-decoration: none;
-  transition: border 300ms ease;
-  width: 50%; }
-
-.payments {
-  display: none; }
-
-.transactions__date-search {
-  margin: auto;
-  padding: 2em 0;
+/*----------------------------------------------------------*    #TRANSFERS
+\*----------------------------------------------------------*/
+.transfers {
+  font-size: 1.6rem;
+  margin: 0 auto;
+  padding: 2em 2em;
+  position: relative;
   width: 80%; }
 
-.transactions-date {
-  border: 1px solid #CACACA;
-  display: inline-block;
-  vertical-align: middle; }
+.transfers__title {
+  border-bottom: 1px solid #CACACA;
+  font-weight: 500;
+  padding: 1em 0 0.2em;
+  margin-bottom: 1em; }
 
-.transactions-date__wrapper {
-  display: inline-block;
-  padding: 0.3em; }
-
-.transactions-date__range-span {
-  display: block;
-  font-size: 0.8em; }
-
-.transactions-date__date-span {
-  font-weight: 500; }
-
-.transactions-date__icon {
-  margin-left: 0.2em;
-  width: 1em; }
-
-.transactions-search__input {
-  border: 1px solid #CACACA;
-  height: 2.7em;
-  margin-left: 1.3em;
-  padding: 0.3em;
-  vertical-align: middle;
+.transfer__input {
   width: 50%; }
 
-.transactions-search__buttont {
-  background: url("/assets/img/magnifingglass.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 1.6em;
+.form-group {
+  padding: 0.6em 1em; }
+
+.transfers__label {
+  display: inline-block;
+  margin-right: 3em;
+  text-align: right;
+  width: 20%; }
+
+.transfers__button-wrapper {
+  margin-top: 2em;
+  text-align: right; }
+
+.transfers__buton {
+  background-color: #ffffff;
   border: 1px solid #CACACA;
-  border-left: none;
-  height: 2.7em;
-  margin-left: -4px;
-  vertical-align: middle;
-  width: 2.7em; }
+  height: 40px;
+  text-transform: uppercase;
+  width: 150px; }
 
-.transactions__item {
-  align-content: flex-start;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  list-style-type: none;
-  margin: 0;
-  padding: 0.6em 0 0.6em 1em; }
+.transfers__buton:hover {
+  background-color: #F4F2F2;
+  border-color: #666666;
+  cursor: pointer;
+  transition: all 300ms; }
 
-.transactions__item:first-child {
-  border-top: 1px solid #F4F2F2; }
-
-.transactions__item:nth-child(odd) {
-  background-color: #ffffff; }
-
-.transactions__item:nth-child(even) {
-  background-color: #F4F2F2; }
-
-.transactions__cell {
-  margin-left: 1em; }
-
-.transactions__date {
-  flex-basis: 10%; }
-
-.transactions__amount {
-  flex-basis: 5%; }
-
-.transactions__currency {
-  flex-basis: 5%; }
-
-.transactions__type {
-  flex-basis: 5%; }
-
-.transactions__description {
-  flex-basis: 30%; }
+/*----------------------------------------------------------*    #PAYMENTS
+\*----------------------------------------------------------*/
+.payments {
+  display: none; }
