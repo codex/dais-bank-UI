@@ -1,0 +1,190 @@
+/*----------------------------------------------------------*\
+    #GLOBALS
+\*----------------------------------------------------------*/
+
+@import 'config';
+
+html, body {
+    font-family: $main-font;
+    font-size: 62.5%;
+    min-height: 100vh;
+    position: relative;
+}
+
+// The bucket is a container for dynamically loaded html
+// sass can't calculate vh, rem, em
+.bucket {
+    padding-top: 5rem;
+}
+
+
+
+/*----------------------------------------------------------*\
+    #HEADER
+\*----------------------------------------------------------*/
+
+.main-header {
+    background-color: $main-color;
+    font-size: 1.6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.main-nav__container {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 1em;
+    position: relative;
+    width: 100%;
+}
+
+    .main-header__logo {
+        display: inline-block;
+        height: 5rem;
+        vertical-align: middle;
+        width: 5rem;
+    }
+
+        .main-header__img {
+            height: 5rem;
+            object-fit: cover;
+            width: 5rem;
+        }
+
+    .main-nav {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+        .main-nav__ul {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 1em;
+        }
+
+            .main-nav__li {
+                display: inline-block;
+                line-height: 4.4em;
+                padding: 0 0.925rem;
+                vertical-align: middle;
+            }
+
+                .main-nav__a {
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+
+                .main-nav__a:hover {
+                    text-decoration: underline;
+                }
+                
+
+.user-controls {
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+}
+
+    .user-controls__ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 1em;
+    }
+
+        .user-controls__li {
+            display: inline-block;
+            line-height: 4.4em;
+            padding: 0 0.925rem;
+            vertical-align: middle;
+        }
+
+            .user-controls__first-icon {
+                background: url('/assets/img/letter.svg')
+            }
+
+                .user-controls__second-icon {
+                    background: url('/assets/img/cogwheel.svg')
+                }
+
+                .user-controls__a--icon {
+                    background-position: center center; 
+                    background-repeat: no-repeat;
+                    background-size: 1.8em;
+                    display: inline-block;
+                    height: 3rem;
+                    opacity: 0.8;
+                    transition: opacity 500ms;
+                    vertical-align: middle;
+                    width: 3rem;
+                }
+
+                .user-controls__a--icon:hover {
+                    opacity: 1;
+                }
+
+                .user-controls__log-out {
+                    color: #ffffff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+
+                .user-controls__log-out:hover {
+                    text-decoration: underline;
+                }
+
+                .user-controls__li--no-right-padding {
+                    padding-right: 0;
+                }
+
+
+
+/*----------------------------------------------------------*\
+    #FOOTER
+\*----------------------------------------------------------*/
+
+.main-footer {
+    background-color: $footer;
+    font-size: 1.6rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+    .main-footer__container {
+        margin: 0 auto;
+        max-width: 1024px;
+        padding: 0 1em;
+        position: relative;
+        width: 100%;
+    }
+
+    .main-footer__a {
+        color: $active;
+        display: inline-block;
+        line-height: 4.4em;
+        padding: 0 0.925rem;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+
+    .main-footer__a:hover {
+        text-decoration: underline;
+    }
+
+    .main-footer__copyright {
+        color: $active;
+        display: inline-block;
+        line-height: 4.4em;
+        margin: 0;
+        position: absolute;
+        right: 1em;
+        vertical-align: middle;
+    }
+
+    .main-footer__a--no-left-padding {
+        padding-left: 0;
+    }

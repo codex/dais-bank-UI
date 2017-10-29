@@ -1,0 +1,220 @@
+<div class="accounts-section">
+
+
+
+
+    <div class="sub-controllers">
+
+        <a href="#" role="button" class="sub-controllers-item sub-controllers-item--active" data-type="accounts">Accounts and cards</a>
+
+        <a href="#" role="button" class="sub-controllers-item" data-type="transactions">Transactions</a>
+
+    </div>
+
+
+
+
+    <div class="accounts-wrapper controls-content--bordered">
+    
+        <div class="transactions ">
+    
+            <div class="transactions__date-search">
+    
+                <div class="transactions-date">
+    
+                    <div class="transactions-date__wrapper">
+    
+                        <span class="transactions-date__range-span">From:</span>
+                        <span class="transactions-date__date-span">23/10/17</span>
+    
+                        <img src="/assets/img/calendar.svg" alt="calendar icon" class="transactions-date__icon">
+    
+                    </div>
+    
+                    <div class="transactions-date__wrapper">
+    
+                        <span class="transactions-date__range-span">To:</span>
+                        <span class="transactions-date__date-span">23/10/17</span>
+    
+                        <img src="/assets/img/calendar.svg" alt="calendar icon" class="transactions-date__icon">
+    
+                    </div>
+    
+                </div>
+    
+                <input type="text" placeholder="Search transactions" class="transactions-search__input">
+    
+                <button type="submit" class="transactions-search__buttont"></button>
+    
+            </div>
+    
+            <div class="transactions__list">
+
+                <ul class="transactions__item transactions__item--title">
+                
+                    <li class="transactions__cell transactions__date transactions__cell--title">
+                        Date
+                    </li>
+                
+                    <li class="transactions__cell transactions__amount transactions__cell--title">
+                        Amount
+                    </li>
+                
+                    <li class="transactions__cell transactions__currency transactions__cell--title">
+                        Currency
+                    </li>
+                
+                    <li class="transactions__cell transactions__type transactions__cell--title">
+                        Type
+                    </li>
+                
+                    <li class="transactions__cell transactions__description transactions__cell--title">
+                        Description
+                    </li>
+                
+                </ul>
+
+                {{#each transactions}}
+
+                    <ul class="transactions__item">
+
+                        <li class="transactions__cell transactions__date">
+                            {{date}}
+                        </li>
+
+                        <li class="transactions__cell transactions__amount">
+                            {{amount}}
+                        </li>
+
+                        <li class="transactions__cell transactions__currency">
+                            {{currency}}
+                        </li>
+
+                        <li class="transactions__cell transactions__type">
+                            {{type}}
+                        </li>
+
+                        <li class="transactions__cell transactions__description">
+                            {{description}}
+                        </li>
+
+                    </ul>
+
+                {{/each}}
+
+            </div>
+    
+        </div>
+
+
+
+    
+
+
+        <div class="accounts">
+
+            <div class="accounts__header">
+                
+                <p class="accounts__title"><span class="accounts__icon accounts__icon--accounts"></span>My Accounts</p>
+
+            </div>
+            
+
+            <div class="accounts__list">
+
+                <ul class="accounts__item accounts__item--title">
+
+                        <li class="accounts__cell accounts__id accounts__cell--title">
+                            Account
+                        </li>
+
+                        <li class="accounts__cell accounts__balance accounts__cell--title">
+                            Balance
+                        </li>
+
+                        <li class="accounts__cell accounts__available accounts__cell--title">
+                            Available amount
+                        </li>
+
+                    </ul>
+
+                {{#each accounts}}
+
+                    <ul class="accounts__item">
+
+                        <li class="accounts__cell accounts__id">
+                            {{id}}
+                        </li>
+
+                        <li class="accounts__cell accounts__balance">
+                            {{balance}}
+                        </li>
+
+                        <li class="accounts__cell accounts__available">
+                            {{available}}
+                        </li>
+
+                    </ul>
+
+                {{/each}}
+
+            </div>
+
+            <div class="cards__header">
+
+                <p class="accounts__title"><span class="accounts__icon accounts__icon--cards"></span>My Cards</p>
+
+            </div>
+
+            <div class="accounts__list">
+
+                <ul class="accounts__item accounts__item--title">
+
+                        <li class="accounts__cell accounts__id accounts__cell--title">
+                            Card
+                        </li>
+
+                        <li class="accounts__cell accounts__balance accounts__cell--title">
+                            Balance
+                        </li>
+
+                        <li class="accounts__cell accounts__available accounts__cell--title">
+                            Available amount
+                        </li>
+
+                    </ul>
+
+                {{#each cards}}
+
+                    <ul class="accounts__item">
+
+                        <li class="accounts__cell accounts__id">
+                            {{type}}
+                        </li>
+
+                        <li class="accounts__cell accounts__balance">
+                            {{balance}}
+                        </li>
+
+                        <li class="accounts__cell accounts__available">
+                            {{available}}
+                        </li>
+
+                    </ul>
+
+                {{/each}}
+
+            </div>
+
+            
+
+        </div>
+
+
+
+
+    
+    </div>
+
+</div>
+

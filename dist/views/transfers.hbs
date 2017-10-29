@@ -1,0 +1,128 @@
+<div class="accounts-section">
+
+
+
+
+    <div class="sub-controllers">
+
+        <a href="#" role="button" class="sub-controllers-item sub-controllers-item--active" data-type="transfers">Transfers</a>
+
+        <a href="#" role="button" class="sub-controllers-item" data-type="payments">Payments</a>
+
+    </div>
+
+
+
+
+    <div class="transfers-wrapper controls-content--bordered">
+
+
+
+
+    
+        <div class="transfers">
+
+            <div class="transfers__title">
+                Sender
+            </div>
+
+            <div class="form-group">
+
+                <label for="accountr" class="transfers__label">Account</label>
+
+                <select id="accountr" class="transfer__input">
+
+                    <option value="null"></option>
+
+                    {{#each accounts}}
+                    <option value="{{id}}">{{id}}</option>
+                    {{/each}}
+
+                </select>
+            </div>
+
+            <div class="form-group">
+
+                <label for="amount" class="transfers__label">Amount</label>
+
+                <input type="text" id="amount" class="transfer__input">
+
+            </div>
+
+            <div class="form-group">
+            
+                <label for="currency" class="transfers__label">Currency</label>
+
+                <select id="currency" class="transfer__input">
+
+                    <option value="null"></option>
+                    <option value="BGN">BGN</option>
+                    <option value="USD">USD</option>
+            
+                </select>
+            
+            </div>
+
+            <div class="transfers__title">
+                Beneficiary
+            </div>
+
+            <div class="form-group">
+
+                <label for="name" class="transfers__label">Name</label>
+                <input type="text" id="name" class="transfer__input">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="type" class="transfers__label">Account type</label>
+                <select id="type" class="transfer__input">
+
+                    <option value="null"></option>
+                    <option value="local">Local account</option>
+                    <option value="abroad">Abroad account</option>
+            
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="iban" class="transfers__label">IBAN</label>
+                <input type="text" id="iban" class="transfer__input">
+
+            </div>
+
+            <div class="transfers__button-wrapper">
+                <button class="transfers__buton">Send</button>
+            </div>
+
+
+
+
+            
+
+        </div>
+
+
+
+    
+
+        <div class="payments">
+
+            <div class="under-construction__wrapper">
+
+                <img src="/assets/img/underconst.svg" alt="hammer and a screwdriver" class="under-construction">
+
+            </div>
+
+        </div>
+
+
+
+
+    
+    </div>
+
+</div>
