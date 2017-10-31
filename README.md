@@ -9,17 +9,17 @@
 
 ### Wireframes
 
-* 1. Accounts and cards info
+* Accounts and cards info
 ---
 
 ![wireframe](./png/bank_home_wireframe_accs%26cards-01.png)
 
-* 2. Transactions info
+*  Transactions info
 ---
 
 ![wireframe](./png/bank_home_wireframe_transactions-01.png)
 
-* 3. Transfer form
+*  Transfer form
 ---
 
 ![wireframe](./png/bank_home_wireframe_transfer.png)
