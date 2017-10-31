@@ -4,9 +4,10 @@
 ### [live demo](https://deeppockets-70a3b.firebaseapp.com/)
 
 ### Hot to run:
-    * npm install
-    * gulp dev
-    * or use the live demo
+
+* npm install
+* gulp dev
+* or use the live demo
 
 ### Userflow
 
