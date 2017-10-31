@@ -3,7 +3,14 @@
 
 ### [live demo](https://deeppockets-70a3b.firebaseapp.com/)
 
+### Hot to run:
+    * npm install
+    * gulp dev
+    * or use the live demo
+
 ### Userflow
+
+---
 
 ![wireframe](./png/bank_home_userflow-01.png)
 
